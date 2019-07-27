@@ -1,0 +1,2066 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	/*-webkit-user-select: none;*/
+}
+html
+{
+	font-size: 10px;
+}
+input,textarea
+{
+	outline: none;
+}
+ul,li
+{
+	list-style: none;
+}
+a
+{
+	text-decoration: none;
+	color: #000;
+}
+
+/*vue(2018-8-17)*/
+/*@font-face {
+  font-family: 'iconfont';
+  src: url('iconfont.eot');
+  src: url('iconfont.eot?#iefix') format('embedded-opentype'),
+  url('iconfont.woff') format('woff'),
+  url('iconfont.ttf') format('truetype'),
+  url('iconfont.svg#iconfont') format('svg');
+}*/
+/*引用图标的类*/
+/*.iconfont{
+  font-family:"iconfont" !important;
+  font-size:16px;font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}*/
+
+/*对a标签的默认样式进行处理*/
+a:active
+{
+	background: none;
+}
+a:focus
+{
+	outline:none
+}
+
+/*左浮动*/
+.left,.float_left
+{
+	float: left;
+}
+/*右浮动*/
+.right,.float_right
+{
+	float: right;	
+}
+/*去掉浮动*/
+.float_none
+{
+	float: none !important;
+}
+/* 强制换行 */
+.qiangzhiHuanhang
+{
+	word-break:break-all;
+}
+/* 自动换行 */
+.zhidongHuanhang
+{
+	word-wrap: break-word; 
+	word-break: normal; 
+}
+/*强制不换行*/
+.qiangziBuHuanhang
+{
+	word-break:break-all;
+}
+/*同时设置了左右浮动时强制右浮动*/
+.left.right,.float_left.float_right
+{
+	float: right;
+}
+/*下划线*/
+.xiahuaxian
+{
+	text-decoration: underline;
+}
+/*字体加粗*/
+.bold
+{
+	font-weight: 600;
+}
+/*字体居左*/
+.textLeft
+{
+	text-align: left;
+}/*字体居中*/
+.textCenter
+{
+	text-align: center;
+}
+/*字体居右*/
+.textRight
+{
+	text-align: right;
+}
+/*字体红色*/
+.red
+{
+	color: red;
+}
+/*字体蓝色*/
+.blue
+{
+	color: blue;
+}
+/*字体黄色*/
+.yellow
+{
+	color: yellow;
+}
+/*字体绿色*/
+.green
+{
+	color: green;
+}
+/*字体橙色*/
+.orange
+{
+	color: orange;
+}
+/*背景颜色为红色*/
+.bgColor_red
+{
+	background: red;
+}
+/*背景颜色为蓝色*/
+.bgColor_blue
+{
+	background: blue;
+}
+/*背景颜色为黄色*/
+.bgColor_yellow
+{
+	background: yellow;
+}
+/*背景颜色为绿色*/
+.bgColor_green
+{
+	background: green;
+}
+/*背景颜色为橙色*/
+.bgColor_orange
+{
+	background: orange;
+}
+/*背景颜色为红色*/
+.bgColor_red
+{
+	background: red;
+}
+/*清除浮动*/
+.clear_both
+{
+	clear: both;
+}
+/*使元素可滚动*/
+.overScroll
+{
+	overflow: scroll;
+}
+/*使元素x轴可滚动*/
+.overScroll_x
+{
+	overflow-x: auto;
+}
+/*使元素y轴可滚动*/
+.overScroll_y
+{
+	overflow-y: auto;
+}
+/*使元素不可滚动*/
+.overVisible
+{
+	overflow: visible;
+}
+/*使元素x轴不可滚动*/
+.overVisible_x
+{
+	overflow-x: visible;
+}
+/*使元素y轴不可滚动*/
+.overVisible_y
+{
+	overflow-y: visible;
+}
+/*消除子元素浮动对父元素的影响,用于块级元素*/
+.overHide
+{
+	overflow: hidden;
+}
+/*消除子元素浮动对父元素的影响,用于行内元素*/
+.diayInBk
+{
+	display: inline-block;
+}
+/*消除子元素浮动对父元素的影响,用于行内元素*/
+.disInBk
+{
+	display: inline-block;
+}
+/*相对定位,主要是用于垂直,水平垂直居中的父元素的相对定位设置*/
+.poReTive
+{
+	position: relative;
+}
+/*垂直居中（需配合父元素设置position: relative;使用）*/
+.cuiZhiCenter
+{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+/*水平垂直居中 （需配合父元素设置position: relative;使用）*/
+.shuiPingCuiZhiCenter
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+}
+/*水平居中*/
+.shuipingjuzhong
+{
+	margin: 0 auto;
+}
+/*单行文字超出以省略号代替*/
+.row_one_overHide_nowrap
+{
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+/*两行文字超出以省略号代替*/
+.row_two_overHide_nowrap
+{
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+}
+/*三行文字超出以省略号代替*/
+.row_three_overHide_nowrap
+{
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+	overflow: hidden;
+}
+/*四行文字超出以省略号代替*/
+.row_four_overHide_nowrap
+{
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 4;
+	overflow: hidden;
+}
+/*五行文字超出以省略号代替*/
+.row_five_overHide_nowrap
+{
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 5;
+	overflow: hidden;
+}
+/*六行文字超出以省略号代替*/
+.row_six_overHide_nowrap
+{
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 6;
+	overflow: hidden;
+}
+/*七行文字超出以省略号代替*/
+.row_seven_overHide_nowrap
+{
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 7;
+	overflow: hidden;
+}
+/*八行文字超出以省略号代替*/
+.row_eight_overHide_nowrap
+{
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 8;
+	overflow: hidden;
+}
+/*九行文字超出以省略号代替*/
+.row_nine_overHide_nowrap
+{
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 9;
+	overflow: hidden;
+}
+/*十行文字超出以省略号代替*/
+.row_ten_overHide_nowrap
+{
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 10;
+	overflow: hidden;
+}
+/*占据全屏*/
+.allScreen
+{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+}
+/*蒙层黑色0.0*/
+.maskLayer_Hei0
+{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+	background: rgba(0,0,0,0);
+	z-index: 999;
+}
+/*蒙层黑色0.1*/
+.maskLayer_Hei1
+{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+	background: rgba(0,0,0,0.1);
+	z-index: 999;
+}
+/*蒙层黑色0.2*/
+.maskLayer_Hei2
+{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+	background: rgba(0,0,0,0.2);
+	z-index: 999;
+}
+/*蒙层黑色0.3*/
+.maskLayer_Hei3
+{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+	background: rgba(0,0,0,0.3);
+	z-index: 999;
+}
+/*蒙层黑色0.4*/
+.maskLayer_Hei4
+{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+	background: rgba(0,0,0,0.4);
+	z-index: 999;
+}
+/*蒙层黑色0.5*/
+.maskLayer_Hei5
+{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+	background: rgba(0,0,0,0.5);
+	z-index: 999;
+}
+/*蒙层黑色0.6*/
+.maskLayer_Hei6
+{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+	background: rgba(0,0,0,0.6);
+	z-index: 999;
+}
+/*蒙层黑色0.7*/
+.maskLayer_Hei7
+{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+	background: rgba(0,0,0,0.7);
+	z-index: 999;
+}
+/*蒙层黑色0.8*/
+.maskLayer_Hei8
+{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+	background: rgba(0,0,0,0.8);
+	z-index: 999;
+}
+/*蒙层黑色0.9*/
+.maskLayer_Hei9
+{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+	background: rgba(0,0,0,0.9);
+	z-index: 999;
+}
+.borderNone
+{
+	border: none !important;
+}
+/*隐藏*//*电脑端隐藏*//**/
+.Hide,.Hide_pc
+{
+	display: none;
+}
+/*隐藏*//*电脑端隐藏*//*手机端隐藏 还占位*/
+.Hide_vis,.Hide_pc_vis
+{
+	visibility: hidden;
+}
+/*显示*//*电脑端显示*//*手机端端显示*/
+.Show,.Show_pc
+{
+	display: block;
+}
+/*显示*//*电脑端显示*//*手机端显示visibility*/
+.Show_vis,.Show_pc_vis
+{
+	visibility:visible
+}
+/*透明*/
+.Opacity
+{
+	opacity: 0;
+}
+/*整个子元素从右往左布局   字在元素中也是从右往左*/
+.direRtl
+{
+	direction: rtl;
+}
+/*处理输入框的*/
+.outNone
+{
+	outline: none;
+}
+/*反转横向排列（右对齐，从后往前排，最后一项排在最前面  字在元素中是从左往右*/
+.direRow_ReSe
+{
+	display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+}
+/*栅格系统，将一行分为12格，每一格大约占据8.333333%。
+ * 其中ye_xiao是640px以下，取小学之意，主要是适应手机端而打造；
+ *     ye_chu是641px至768px，取初中之意，主要是适应平板端而打造；
+ *     ye_gao是769px至1365px，取高中之意，主要为适应中屏电脑而打造；
+ *     ye_da是1366px至1920px，取大学之意，主要为适应常用电脑而打造；
+   行*/
+.ye_diayFlex
+{
+	display: -webkit-flex;
+    display: flex;
+    width: 100%;
+}
+/*ye_xiao是640px以下，取小学之意，主要是适应手机端而打造*/
+@media screen and (min-width: 100px) and (max-width: 640px) {
+	.ye_xiao_1,.ye_xiao_2,.ye_xiao_3,.ye_xiao_4,.ye_xiao_5,.ye_xiao_6,.ye_xiao_7,.ye_xiao_8,.ye_xiao_9,.ye_xiao_10,.ye_xiao_11,.ye_xiao_12
+	{
+		float: left;
+	}
+	.ye_xiao_1
+	{
+		width: 8.333333% !important;
+	}
+	.ye_xiao_2
+	{
+		width: 16.666666% !important;
+	}
+	.ye_xiao_3
+	{
+		width: 25% !important;
+	}
+	.ye_xiao_4
+	{
+		width: 33.333333% !important;
+	}
+	.ye_xiao_5
+	{
+		width: 41.666666% !important;
+	}
+	.ye_xiao_6
+	{
+		width: 50% !important;
+	}
+	.ye_xiao_7
+	{
+		width: 58.333333% !important;
+	}
+	.ye_xiao_8
+	{
+		width: 64.666666% !important;
+	}
+	.ye_xiao_9
+	{
+		width: 75% !important;
+	}
+	.ye_xiao_10
+	{
+		width: 83.333333% !important;
+	}
+	.ye_xiao_11
+	{
+		width: 91.666666% !important;
+	}
+	.ye_xiao_12
+	{
+		width: 100% !important;
+	}
+	
+	
+/*移动端margin值*/
+	/*左margin为0px*/
+	.magn_xiao_left_0
+	{
+		margin-left: 0px;
+	}
+	/*右margin为0px*/
+	.magn_xiao_right_0
+	{
+		margin-right: 0px;
+	}
+	/*上margin为0px*/
+	.magn_xiao_top_0
+	{
+		margin-top: 0px;
+	}
+	/*下margin为0px*/
+	.magn_xiao_bottom_0
+	{
+		margin-bottom: 0px;
+	}
+	
+	/*左margin为5px*/
+	.magn_xiao_left_5
+	{
+		margin-left: 5px;
+	}
+	/*右margin为5px*/
+	.magn_xiao_right_5
+	{
+		margin-right: 5px;
+	}
+	/*上margin为5px*/
+	.magn_xiao_top_5
+	{
+		margin-top: 5px;
+	}
+	/*下margin为5px*/
+	.magn_xiao_bottom_5
+	{
+		margin-bottom: 5px;
+	}
+	
+	/*左margin为10px*/
+	.magn_xiao_left_10
+	{
+		margin-left: 10px;
+	}
+	/*右margin为10px*/
+	.magn_xiao_right_10
+	{
+		margin-right: 10px;
+	}
+	/*上margin为10px*/
+	.magn_xiao_top_10
+	{
+		margin-top: 10px;
+	}
+	/*下margin为10px*/
+	.magn_xiao_bottom_10
+	{
+		margin-bottom: 10px;
+	}
+	
+	/*左margin为15px*/
+	.magn_xiao_left_15
+	{
+		margin-left: 15px;
+	}
+	/*右margin为15px*/
+	.magn_xiao_right_15
+	{
+		margin-right: 15px;
+	}
+	/*上margin为15px*/
+	.magn_xiao_top_15
+	{
+		margin-top: 15px;
+	}
+	/*下margining为15px*/
+	.magn_xiao_bottom_15
+	{
+		margin-bottom: 15px;
+	}
+	
+	/*左margin为20px*/
+	.magn_xiao_left_20
+	{
+		margin-left: 20px;
+	}
+	/*右margin为20px*/
+	.magn_xiao_right_20
+	{
+		margin-right: 20px;
+	}
+	/*上margin为20px*/
+	.magn_xiao_top_20
+	{
+		margin-top: 20px;
+	}
+	/*下margin为20px*/
+	.magn_xiao_bottom_20
+	{
+		margin-bottom: 20px;
+	}
+	
+	
+/*移动端padding值*/
+	/*左padding为0px*/
+	.padd_xiao_left_0
+	{
+		padding-left: 0px;
+	}
+	/*右padding为0px*/
+	.padd_xiao_right_0
+	{
+		padding-right: 0px;
+	}
+	/*上padding为0px*/
+	.padd_xiao_top_0
+	{
+		padding-top: 0px;
+	}
+	/*下padding为0px*/
+	.padd_xiao_bottom_0
+	{
+		padding-bottom: 0px;
+	}
+	
+	/*左padding为5px*/
+	.padd_xiao_left_5
+	{
+		padding-left: 5px;
+	}
+	/*右padding为5px*/
+	.padd_xiao_right_5
+	{
+		padding-right: 5px;
+	}
+	/*上padding为5px*/
+	.padd_xiao_top_5
+	{
+		padding-top: 5px;
+	}
+	/*下padding为5px*/
+	.padd_xiao_bottom_5
+	{
+		padding-bottom: 5px;
+	}
+	
+	/*左padding为10px*/
+	.padd_xiao_left_10
+	{
+		padding-left: 10px;
+	}
+	/*右padding为10px*/
+	.padd_xiao_right_10
+	{
+		padding-right: 10px;
+	}
+	/*上padding为10px*/
+	.padd_xiao_top_10
+	{
+		padding-top: 10px;
+	}
+	/*下padding为10px*/
+	.padd_xiao_bottom_10
+	{
+		padding-bottom: 10px;
+	}
+	
+	/*左padding为20px*/
+	.padd_xiao_left_20
+	{
+		padding-left: 20px;
+	}
+	/*右padding为20px*/
+	.padd_xiao_right_20
+	{
+		padding-right: 20px;
+	}
+	/*上padding为20px*/
+	.padd_xiao_top_20
+	{
+		padding-top: 20px;
+	}
+	/*下padding为20px*/
+	.padd_xiao_bottom_20
+	{
+		padding-bottom: 0px;
+	}
+	
+	
+	/*左padding为15px*/
+	.padd_xiao_left_15
+	{
+		padding-left: 15px;
+	}
+	/*右padding为15px*/
+	.padd_xiao_right_15
+	{
+		padding-right: 15px;
+	}
+	/*上padding为15px*/
+	.padd_xiao_top_15
+	{
+		padding-top: 15px;
+	}
+	/*下padding为15px*/
+	.padd_xiao_bottom_15
+	{
+		padding-bottom: 15px;
+	}
+	
+	
+	/*移动端隐藏*/
+	.Hide_iphone
+	{
+		display: none;
+	}
+	.Hide_vis_iphone
+	{
+		visibility: hidden;
+	}
+	
+	/*移动端显示*/
+	.Show_iphone
+	{
+		display: block;
+	}
+	.Show_vis_iphone
+	{
+		visibility: visible;
+	}
+}
+/*ye_chu是641px至768px，取初中之意，主要是适应平板端而打造*/
+@media screen and (min-width: 641px) and (max-width: 768px) {
+	.ye_chu_1,.ye_chu_2,.ye_chu_3,.ye_chu_4,.ye_chu_5,.ye_chu_6,.ye_chu_7,.ye_chu_8,.ye_chu_9,.ye_chu_10,.ye_chu_11,.ye_chu_12
+	{
+		float: left;
+	}
+	.ye_chu_1
+	{
+		width: 8.333333%;
+	}
+	.ye_chu_2
+	{
+		width: 16.666666%;
+	}
+	.ye_chu_3
+	{
+		width: 25%;
+	}
+	.ye_chu_4
+	{
+		width: 33.333333%;
+	}
+	.ye_chu_5
+	{
+		width: 41.666666%;
+	}
+	.ye_chu_6
+	{
+		width: 50%;
+	}
+	.ye_chu_7
+	{
+		width: 58.333333%;
+	}
+	.ye_chu_8
+	{
+		width: 64.666666%;
+	}
+	.ye_chu_9
+	{
+		width: 75%;
+	}
+	.ye_chu_10
+	{
+		width: 83.333333%;
+	}
+	.ye_chu_11
+	{
+		width: 91.666666%;
+	}
+	.ye_chu_12
+	{
+		width: 100%;
+	}
+}
+/*ye_gao是769px至1365px，取高中之意，主要为适应中屏电脑而打造*/
+@media screen and (min-width: 769px) and (max-width: 1365px) {
+	.ye_gao_1,.ye_gao_2,.ye_gao_3,.ye_gao_4,.ye_gao_5,.ye_gao_6,.ye_gao_7,.ye_gao_8,.ye_gao_9,.ye_gao_10,.ye_gao_11,.ye_gao_12
+	{
+		float: left;
+	}
+	.ye_gao_1
+	{
+		width: 8.333333%;
+	}
+	.ye_gao_2
+	{
+		width: 16.666666%;
+	}
+	.ye_gao_3
+	{
+		width: 25%;
+	}
+	.ye_gao_4
+	{
+		width: 33.333333%;
+	}
+	.ye_gao_5
+	{
+		width: 41.666666%;
+	}
+	.ye_gao_6
+	{
+		width: 50%;
+	}
+	.ye_gao_7
+	{
+		width: 58.333333%;
+	}
+	.ye_gao_8
+	{
+		width: 64.666666%;
+	}
+	.ye_gao_9
+	{
+		width: 75%;
+	}
+	.ye_gao_10
+	{
+		width: 83.333333%;
+	}
+	.ye_gao_11
+	{
+		width: 91.666666%;
+	}
+	.ye_gao_12
+	{
+		width: 100%;
+	}
+}
+/*ye_da是1366px至1920px，取大学之意，主要为适应常用电脑而打造*/
+@media screen and (min-width: 1366px) and (max-width: 1920px) {
+	.ye_da_1,.ye_da_2,.ye_da_3,.ye_da_4,.ye_da_5,.ye_da_6,.ye_da_7,.ye_da_8,.ye_da_9,.ye_da_10,.ye_da_11,.ye_da_12
+	{
+		float: left;
+	}
+	.ye_da_1
+	{
+		width: 8.333333%;
+	}
+	.ye_da_2
+	{
+		width: 16.666666%;
+	}
+	.ye_da_3
+	{
+		width: 25%;
+	}
+	.ye_da_4
+	{
+		width: 33.333333%;
+	}
+	.ye_da_5
+	{
+		width: 41.666666%;
+	}
+	.ye_da_6
+	{
+		width: 50%;
+	}
+	.ye_da_7
+	{
+		width: 58.333333%;
+	}
+	.ye_da_8
+	{
+		width: 64.666666%;
+	}
+	.ye_da_9
+	{
+		width: 75%;
+	}
+	.ye_da_10
+	{
+		width: 83.333333%;
+	}
+	.ye_da_11
+	{
+		width: 91.666666%;
+	}
+	.ye_da_12
+	{
+		width: 100%;
+	}
+}
+
+/*正常情况下以百分比*/
+.ye_all_1,.ye_all_2,.ye_all_3,.ye_all_4,.ye_all_5,.ye_all_6,.ye_all_7,.ye_all_8,.ye_all_9,.ye_all_10
+{
+	float: left;
+}
+.ye_all_1
+{
+	width: 10%;
+}
+.ye_all_2
+{
+	width: 20%;
+}
+.ye_all_3
+{
+	width: 30%;
+}
+.ye_all_4
+{
+	width: 40%;
+}
+.ye_all_5
+{
+	width: 50%;
+}
+.ye_all_6
+{
+	width: 60%;
+}
+.ye_all_7
+{
+	width: 70%;
+}
+.ye_all_8
+{
+	width: 80%;
+}
+.ye_all_9
+{
+	width: 90%;
+}
+.ye_all_10
+{
+	width: 100%;
+}
+
+/*弹性盒子布局*/
+/*父元素*/
+.disFlex
+{
+	display: flex;
+}
+/*弹性盒子副局垂直居中*/
+.disChuizhiCenter
+{
+	-webkit-justify-content: center;
+    justify-content: center;
+}
+/*子元素*/
+.flex1
+{
+	flex: 1;
+}
+/*表格布局*/
+.disTable
+{
+	display: table;
+}
+/*表格布局垂直居中*/
+.tabChuizhiCenter
+{
+	display: table-cell;
+	vertical-align: middle;
+}
+/*鼠标放上去显示手式*/
+.curPoter
+{
+	cursor: pointer;
+}
+/*鼠标放上去显示禁止点击*/
+.curNoDrop
+{
+	cursor: no-drop;
+}
+
+.hang
+{
+	width: 100%;
+}
+
+/*背景颜色f6f6f6*/
+.bgColor_f6
+{
+	background-color: #f6f6f6;
+}
+/*背景颜色ffffff*/
+.bgColor_fff
+{
+	background-color:#fff ;
+}
+/*背景颜色eee*/
+.bgColor_eee
+{
+	background-color:#eee ;
+}
+/*背景颜色ddd*/
+.bgColor_ddd
+{
+	background-color:#ddd ;
+}
+/*背景颜色ccc*/
+.bgColor_ccc
+{
+	background-color:#ccc ;
+}
+/*背景颜色bbb*/
+.bgColor_bbb
+{
+	background-color:#bbb ;
+}
+/*背景颜色aaa*/
+.bgColor_aaa
+{
+	background-color:#aaa ;
+}
+/*背景颜色999*/
+.bgColor_999
+{
+	background-color:#999 ;
+}
+/*背景颜色888*/
+.bgColor_888
+{
+	background-color:#888 ;
+}
+/*背景颜色777*/
+.bgColor_777
+{
+	background-color:#777 ;
+}
+/*背景颜色666*/
+.bgColor_666
+{
+	background-color:#666 ;
+}
+/*背景颜色555*/
+.bgColor_555
+{
+	background-color:#555 ;
+}
+/*背景颜色444444*/
+.bgColor_444
+{
+	background-color:#444 ;
+}
+/*背景颜色333333*/
+.bgColor_333
+{
+	background-color:#333 ;
+}
+/*背景颜色222222*/
+.bgColor_222
+{
+	background-color:#222 ;
+}
+/*背景颜色111111*/
+.bgColor_111
+{
+	background-color:#111 ;
+}
+/*背景颜色000000*/
+.bgColor_000
+{
+	background-color:#000 ;
+}
+
+/*左padding为0px*/
+.padd_left_0
+{
+	padding-left: 0px;
+}
+/*右padding为0px*/
+.padd_right_0
+{
+	padding-right: 0px;
+}
+/*上padding为0px*/
+.padd_top_0
+{
+	padding-top: 0px;
+}
+/*下padding为0px*/
+.padd_bottom_0
+{
+	padding-bottom: 0px;
+}
+
+/*左padding为5px*/
+.padd_left_5
+{
+	padding-left: 5px;
+}
+/*右padding为5px*/
+.padd_right_5
+{
+	padding-right: 5px;
+}
+/*上padding为5px*/
+.padd_top_5
+{
+	padding-top: 5px;
+}
+/*下padding为5px*/
+.padd_bottom_5
+{
+	padding-bottom: 5px;
+}
+
+/*左padding为10px*/
+.padd_left_10
+{
+	padding-left: 10px;
+}
+/*右padding为10px*/
+.padd_right_10
+{
+	padding-right: 10px;
+}
+/*上padding为10px*/
+.padd_top_10
+{
+	padding-top: 10px;
+}
+/*下padding为10px*/
+.padd_bottom_10
+{
+	padding-bottom: 10px;
+}
+
+/*左padding为15px*/
+.padd_left_15
+{
+	padding-left: 15px;
+}
+/*右padding为15px*/
+.padd_right_15
+{
+	padding-right: 15px;
+}
+/*上padding为15px*/
+.padd_top_15
+{
+	padding-top: 15px;
+}
+/*下padding为15px*/
+.padd_bottom_15
+{
+	padding-bottom: 15px;
+}
+
+/*左padding为20px*/
+.padd_left_20
+{
+	padding-left: 20px;
+}
+/*右padding为20px*/
+.padd_right_20
+{
+	padding-right: 20px;
+}
+/*上padding为20px*/
+.padd_top_20
+{
+	padding-top: 20px;
+}
+/*下padding为20px*/
+.padd_bottom_20
+{
+	padding-bottom: 20px;
+}
+
+
+/*左padding为15px*/
+.padd_left_15
+{
+	padding-left: 15px;
+}
+/*右padding为15px*/
+.padd_right_15
+{
+	padding-right: 15px;
+}
+/*上padding为15px*/
+.padd_top_15
+{
+	padding-top: 15px;
+}
+/*下padding为15px*/
+.padd_bottom_15
+{
+	padding-bottom: 15px;
+}
+
+/*左padding为25px*/
+.padd_left_25
+{
+	padding-left: 25px;
+}
+/*右padding为25px*/
+.padd_right_25
+{
+	padding-right: 25px;
+}
+/*上padding为25px*/
+.padd_top_25
+{
+	padding-top: 25px;
+}
+/*下padding为25px*/
+.padd_bottom_25
+{
+	padding-bottom: 25px;
+}
+
+/*左padding为30px*/
+.padd_left_30
+{
+	padding-left: 30px;
+}
+/*右padding为30px*/
+.padd_right_30
+{
+	padding-right: 30px;
+}
+/*上padding为30px*/
+.padd_top_30
+{
+	padding-top: 30px;
+}
+/*下padding为15px*/
+.padd_bottom_30
+{
+	padding-bottom: 30px;
+}
+
+/*左padding为35px*/
+.padd_left_35
+{
+	padding-left: 35px;
+}
+/*右padding为35px*/
+.padd_right_35
+{
+	padding-right: 35px;
+}
+/*上padding为35px*/
+.padd_top_35
+{
+	padding-top: 35px;
+}
+/*下padding为35px*/
+.padd_bottom_35
+{
+	padding-bottom: 35px;
+}
+
+/*左padding为40px*/
+.padd_left_40
+{
+	padding-left: 40px;
+}
+/*右padding为40px*/
+.padd_right_40
+{
+	padding-right: 40px;
+}
+/*上padding为40px*/
+.padd_top_40
+{
+	padding-top: 40px;
+}
+/*下padding为40px*/
+.padd_bottom_40
+{
+	padding-bottom: 40px;
+}
+
+/*左padding为45px*/
+.padd_left_45
+{
+	padding-left: 45px;
+}
+/*右padding为45px*/
+.padd_right_45
+{
+	padding-right: 45px;
+}
+/*上padding为45px*/
+.padd_top_45
+{
+	padding-top: 45px;
+}
+/*下padding为45px*/
+.padd_bottom_45
+{
+	padding-bottom: 45px;
+}
+
+/*左padding为50px*/
+.padd_left_50
+{
+	padding-left: 50px;
+}
+/*右padding为50px*/
+.padd_right_50
+{
+	padding-right: 50px;
+}
+/*上padding为50px*/
+.padd_top_50
+{
+	padding-top: 50px;
+}
+/*下padding为50px*/
+.padd_bottom_50
+{
+	padding-bottom: 50px;
+}
+
+
+
+/*左右padding为0px*/
+.padd_leftRight_0
+{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+/*上下padding为0px*/
+.padd_topBottom_0
+{
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+/*上下padding为10px*/
+.padd_topBottomLeftRight_0
+{
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+/*左右padding为5px*/
+.padd_leftRight_5
+{
+	padding-left: 5px;
+	padding-right: 5px;
+}
+/*左右padding为10px*/
+.padd_leftRight_10
+{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+/*左右padding为15px*/
+.padd_leftRight_15
+{
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+/*左右padding为20px*/
+.padd_leftRight_20
+{
+	padding-left: 20px;
+	padding-right: 20px;
+}
+/*左右padding为25px*/
+.padd_leftRight_25
+{
+	padding-left: 25px;
+	padding-right: 25px;
+}
+/*左右padding为30px*/
+.padd_leftRight_30
+{
+	padding-left: 30px;
+	padding-right: 30px;
+}
+/*左右padding为35px*/
+.padd_leftRight_35
+{
+	padding-left: 35px;
+	padding-right: 35px;
+}
+/*左右padding为40px*/
+.padd_leftRight_40
+{
+	padding-left: 40px;
+	padding-right: 40px;
+}
+/*左右padding为45px*/
+.padd_leftRight_45
+{
+	padding-left: 45px;
+	padding-right: 45px;
+}
+/*左右padding为50px*/
+.padd_leftRight_50
+{
+	padding-left: 50px;
+	padding-right: 50px;
+}
+/*上下padding为5px*/
+.padd_topBottom_5
+{
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+/*上下padding为10px*/
+.padd_topBottom_10
+{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+/*上下padding为15px*/
+.padd_topBottom_15
+{
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+/*上下padding为20px*/
+.padd_topBottom_20
+{
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+/*上下padding为25px*/
+.padd_topBottom_25
+{
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+/*上下padding为30px*/
+.padd_topBottom_30
+{
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+/*上下padding为35px*/
+.padd_topBottom_35
+{
+	padding-top: 35px;
+	padding-bottom: 35px;
+}
+/*上下padding为40px*/
+.padd_topBottom_40
+{
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+/*上下padding为45px*/
+.padd_topBottom_45
+{
+	padding-top: 45px;
+	padding-bottom: 45px;
+}
+/*上下padding为50px*/
+.padd_topBottom_50
+{
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+/*上下padding为5px*/
+.padd_topBottomLeftRight_5
+{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+/*上下padding为10px*/
+.padd_topBottomLeftRight_10
+{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+/*上下padding为15px*/
+.padd_topBottomLeftRight_15
+{
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+/*上下padding为20px*/
+.padd_topBottomLeftRight_20
+{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+/*上下padding为25px*/
+.padd_topBottomLeftRight_25
+{
+	padding-top: 25px;
+	padding-bottom: 25px;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+/*上下padding为30px*/
+.padd_topBottomLeftRight_30
+{
+	padding-top: 30px;
+	padding-bottom: 30px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+/*上下padding为35px*/
+.padd_topBottomLeftRight_35
+{
+	padding-top: 35px;
+	padding-bottom: 35px;
+	padding-left: 35px;
+	padding-right: 35px;
+}
+/*上下padding为40px*/
+.padd_topBottomLeftRight_40
+{
+	padding-top: 40px;
+	padding-bottom: 40px;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+/*上下padding为45px*/
+.padd_topBottomLeftRight_45
+{
+	padding-top: 45px;
+	padding-bottom: 45px;
+	padding-left: 45px;
+	padding-right: 45px;
+}
+/*上下padding为50px*/
+.padd_topBottomLeftRight_50
+{
+	padding-top: 50px;
+	padding-bottom: 50px;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+
+/*左margin为0px*/
+.magn_left_0
+{
+	margin-left: 0px;
+}
+/*右margin为0px*/
+.magn_right_0
+{
+	margin-right: 0px;
+}
+/*上margin为0px*/
+.magn_top_0
+{
+	margin-top: 0px;
+}
+/*下margin为0px*/
+.magn_bottom_0
+{
+	margin-bottom: 0px;
+}
+
+/*左margin为5px*/
+.magn_left_5
+{
+	margin-left: 5px;
+}
+/*右margin为5px*/
+.magn_right_5
+{
+	margin-right: 5px;
+}
+/*上margin为5px*/
+.magn_top_5
+{
+	margin-top: 5px;
+}
+/*下margin为5px*/
+.magn_bottom_5
+{
+	margin-bottom: 5px;
+}
+
+/*左margin为10px*/
+.magn_left_10
+{
+	margin-left: 10px;
+}
+/*右margin为10px*/
+.magn_right_10
+{
+	margin-right: 10px;
+}
+/*上margin为10px*/
+.magn_top_10
+{
+	margin-top: 10px;
+}
+/*下margin为10px*/
+.magn_bottom_10
+{
+	margin-bottom: 10px;
+}
+
+/*左margin为15px*/
+.magn_left_15
+{
+	margin-left: 15px;
+}
+/*右margin为15px*/
+.magn_right_15
+{
+	margin-right: 15px;
+}
+/*上margin为15px*/
+.magn_top_15
+{
+	margin-top: 15px;
+}
+/*下margining为15px*/
+.magn_bottom_15
+{
+	margin-bottom: 15px;
+}
+
+/*左margin为20px*/
+.magn_left_20
+{
+	margin-left: 20px;
+}
+/*右margin为20px*/
+.magn_right_20
+{
+	margin-right: 20px;
+}
+/*上margin为20px*/
+.magn_top_20
+{
+	margin-top: 20px;
+}
+/*下margin为20px*/
+.magn_bottom_20
+{
+	margin-bottom: 20px;
+}
+
+
+/*左右margin为5px*/
+.magn_leftRight_5
+{
+	margin-left: 5px;
+	margin-right: 5px;
+}
+/*左右margin为10px*/
+.magn_leftRight_10
+{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+/*左右margin为15px*/
+.magn_leftRight_15
+{
+	margin-left: 15px;
+	margin-right: 15px;
+}
+/*上下margin为5px*/
+.magn_topBottom_5
+{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+/*上下margin为10px*/
+.magn_topBottom_10
+{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+/*上下margin为15px*/
+.magn_topBottom_15
+{
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+/*左右margin为20px*/
+.magn_leftRight_20
+{
+	margin-left: 20px;
+	margin-right: 20px;
+}
+/*上下margin为20px*/
+.magn_topBottom_20
+{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+/*上下margin为5px*/
+.magn_topBottomLeftRight_5
+{
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+/*上下margin为10px*/
+.magn_topBottomLeftRight_10
+{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+/*上下margin为15px*/
+.magn_topBottomLeftRight_15
+{
+	margin-top: 15px;
+	margin-bottom: 15px;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+/*上下margin为20px*/
+.magn_topBottomLeftRight_20
+{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+/*字体颜色为白色fff*/
+.color_fff
+{
+	color: #fff;
+}
+/*字体颜色为灰色eee*/
+.color_eee
+{
+	color: #eee;
+}
+/*字体颜色为灰色ddd*/
+.color_ddd
+{
+	color: #ddd;
+}
+/*字体颜色为灰色ccc*/
+.color_ccc
+{
+	color: #ccc;
+}
+/*字体颜色为灰色bbb*/
+.color_bbb
+{
+	color: #bbb;
+}
+/*字体颜色为灰色aaa*/
+.color_aaa
+{
+	color: #aaa;
+}
+/*字体颜色为灰色999*/
+.color_999
+{
+	color: #999;
+}
+/*字体颜色为灰色888*/
+.color_888
+{
+	color: #888;
+}
+/*字体颜色为灰色777*/
+.color_777
+{
+	color: #777;
+}
+/*字体颜色为灰色666*/
+.color_666
+{
+	color: #666;
+}
+/*字体颜色为灰色555*/
+.color_555
+{
+	color: #555;
+}
+/*字体颜色为灰色444*/
+.color_444
+{
+	color: #444;
+}
+/*字体颜色为灰色333*/
+.color_333
+{
+	color: #333;
+}
+/*字体颜色为灰色222*/
+.color_222
+{
+	color: #222;
+}
+/*字体颜色为灰色111*/
+.color_111
+{
+	color: #111;
+}
+/*字体颜色为黑色000*/
+.color_000
+{
+	color: #000;
+}
+
+/*预设置字体大小*/
+/*字体大小为8px*/
+.fontSize8
+{
+	font-size: 0.8rem;
+}
+/*字体大小为9px*/
+.fontSize9
+{
+	font-size: 0.9rem;
+}
+/*字体大小为10px*/
+.fontSize10
+{
+	font-size: 1rem;
+}
+/*字体大小为11px*/
+.fontSize11
+{
+	font-size: 1.1rem;
+}
+/*字体大小为12px*/
+.fontSize12
+{
+	font-size: 1.2rem;
+}
+/*字体大小为13px*/
+.fontSize13
+{
+	font-size: 1.3rem;
+}
+/*字体大小为14px*/
+.fontSize14
+{
+	font-size: 1.4rem;
+}
+/*字体大小为15px*/
+.fontSize15
+{
+	font-size: 1.5rem;
+}
+/*字体大小为16px*/
+.fontSize16
+{
+	font-size: 1.6rem;
+}
+/*字体大小为17px*/
+.fontSize17
+{
+	font-size: 1.7rem;
+}
+/*字体大小为18px*/
+.fontSize18
+{
+	font-size: 1.8rem;
+}
+/*字体大小为19px*/
+.fontSize19
+{
+	font-size: 1.9rem;
+}
+/*字体大小为20px*/
+.fontSize20
+{
+	font-size: 2rem;
+}
+/*字体大小为21px*/
+.fontSize21
+{
+	font-size: 2.1rem;
+}
+/*字体大小为22px*/
+.fontSize22
+{
+	font-size: 2.2rem;
+}
+/*字体大小为23px*/
+.fontSize23
+{
+	font-size: 2.3rem;
+}
+/*字体大小为24px*/
+.fontSize24
+{
+	font-size: 2.4rem;
+}
+/*字体大小为25px*/
+.fontSize25
+{
+	font-size: 2.5rem;
+}
+/*字体大小为26px*/
+.fontSize26
+{
+	font-size: 2.6rem;
+}
+/*字体大小为27px*/
+.fontSize27
+{
+	font-size: 2.7rem;
+}
+/*字体大小为28px*/
+.fontSize28
+{
+	font-size: 2.8rem;
+}
+/*字体大小为29px*/
+.fontSize29
+{
+	font-size: 2.9rem;
+}
+/*字体大小为30px*/
+.fontSize30
+{
+	font-size: 3rem;
+}
+
+/*圆角边框*/
+/*圆角边框值为3px*/
+.bdRadius3
+{
+	border-radius: 3px;
+}
+/*圆角边框值为5px*/
+.bdRadius5
+{
+	border-radius: 5px;
+}
+/*圆角边框值为8px*/
+.bdRadius8
+{
+	border-radius: 8px;
+}
+/*圆角边框值为10px*/
+.bdRadius10
+{
+	border-radius: 10px;
+}
+/*圆角边框值为12px*/
+.bdRadius12
+{
+	border-radius: 12px;
+}
+/*圆角边框值为15px*/
+.bdRadius15
+{
+	border-radius: 15px;
+}
+/*圆角边框值为20px*/
+.bdRadius20
+{
+	border-radius: 20px;
+}
+/*圆角边框值为25px*/
+.bdRadius25
+{
+	border-radius: 25px;
+}
+/*圆角边框值为30px*/
+.bdRadius30
+{
+	border-radius: 30px;
+}
+/*圆角边框值为40px*/
+.bdRadius40
+{
+	border-radius: 40px;
+}
+/*圆角边框值为50px*/
+.bdRadius50
+{
+	border-radius: 50px;
+}
+/*圆角边框值为50%,此时为圆*/
+.bdRadius50_yuan
+{
+	border-radius: 50%;
+}
+/*去掉边框*/
+.bdNone
+{
+	border: none;
+}
+

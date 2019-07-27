@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>server</title>
+		<link rel="stylesheet" href="css/UI.css" />
+		<link rel="stylesheet" href="css/main.css" />
+	</head>
+	<body>
+		<div class="main">
+			<div class="login_box shuiPingCuiZhiCenter">
+				<div class="login_title textCenter fontSize22 magn_bottom_20 padd_top_30">
+					用户登录
+				</div>
+				<div class="login_touxiang padd_top_20">
+					<div class="touxiang_title padd_left_20 fontSize16 magn_bottom_10">
+						选择头像
+					</div>
+					<ul class="img_ul overHide">
+						<li class="img_lis left ye_da_3 ye_gao_3">
+							<img class="active" src="img/86883a42gy1fi6i941u0pj20g40g4dg9.jpg" />
+						</li>
+						<li class="img_lis left ye_da_3 ye_gao_3">
+							<img src="img/006Cmetyly1fi1uj31b3jj30hy0hyab2.jpg" />
+						</li>
+						<li class="img_lis left ye_da_3 ye_gao_3">
+							<img src="img/006DFKaTly1feuchuvchpj30k00k03zu.jpg" />
+						</li>
+						<li class="img_lis left ye_da_3 ye_gao_3">
+							<img src="img/006i7geoly1fetaxvitlwj30k00k0t9r.jpg" />
+						</li>
+						<li class="img_lis left ye_da_3 ye_gao_3">
+							<img src="img/006oOWahly1fi33mvk2ctj30dh0edglx.jpg" />
+						</li>
+						<li class="img_lis left ye_da_3 ye_gao_3">
+							<img src="img/7280659bgw1fbk5dpadkvj205c06owem.jpg" />
+						</li>
+						<li class="img_lis left ye_da_3 ye_gao_3">
+							<img src="img/006Cmetyly1fi1uj4sw8hj30hs08474u.jpg" />
+						</li>
+						<li class="img_lis left ye_da_3 ye_gao_3">
+							<img src="img/7280659bgw1fbk5dnrp4jj205c06ot8t.jpg" />
+						</li>
+					</ul>
+				</div>
+				<div class="login_username textCenter padd_leftRight_30">
+					<input type="text" class="ye_all_10" id="username" placeholder="请输入你的聊天用户名" />
+				</div>
+				<div class="login_btn_box textCenter">
+					<button id="login_btn">登录</button>
+				</div>
+			</div>
+			<div class="liaotian_box shuiPingCuiZhiCenter Hide">
+				<div class="liaotian_left left">
+					<div class="liaotian_me padd_topBottom_10" id="user_msg">
+						<ul class="liaotian_me_ul padd_topBottom_10">
+							<li class="user_lis overHide">
+								<img class="user_img left" />
+								<div class="user_name row_one_overHide_nowrap left color_fff fontSize16"></div>
+							</li>
+						</ul>
+					</div>
+					<div class="liaotian_user">
+						<div class="liaotian_user_title color_fff fontSize18 padd_left_15">
+							用户列表
+						</div>
+						<ul id="liaotian_user_ul" class="liaotian_user_ul overHide">
+							
+						</ul>
+					</div>
+				</div>
+				<div class="liaotian_right left poReTive">
+					<div class="liaotian_right_top padd_leftRight_25">
+						<div class="liaotian_right_title textCenter fontSize24">
+							聊天室(<span class="now_user_num"></span>)
+						</div>
+						<div class="liaotian_right_content" id="liaotian_right_content">
+							
+						</div>
+					</div>
+				
+					<div class="liaotian_right_bottom">
+						<textarea id="textarea" class="padd_leftRight_10 padd_topBottom_15 fontSize16 color_444"></textarea>
+						<button id="send_btn" class="padd_leftRight_35 bdRadius3 color_444 fontSize16 float_right bgColor_fff magn_right_20 magn_top_10 curPoter outNone">发送</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+	<!--引入socketio-->
+	<script src="/socket.io/socket.io.js"></script>
+	<script type="text/javascript" src="js/jquery-1.7.1.js" ></script>
+	<script type="text/javascript" src="js/index.js" ></script>
+</html>

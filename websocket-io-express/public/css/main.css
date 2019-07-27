@@ -1,0 +1,290 @@
+html,body
+{
+	background: rgb(14,22,43);
+}
+.main
+{
+	width: 100%;
+	margin: 0 auto;
+}
+.login_box
+{
+	width: 400px;
+	background: #fff;
+	border-radius: 20px;
+}
+.login_title
+{
+	color: #4264f8;
+}
+.img_ul 
+{
+	width: 360px;
+	margin: 0 auto;
+}
+.img_lis
+{
+	padding: 5px;
+}
+.img_lis>img.active
+{
+	box-shadow: 0 0 5px #4264f8;
+	border-radius: 50%;
+}
+.img_lis>img
+{
+	width: 100%;
+	border-radius: 50%;
+	height: 80px;
+	box-shadow: 0 0 5px #aaa;
+	cursor: pointer;
+}
+#username
+{
+	border: none;
+	border-bottom: 1px solid #aaa;
+	line-height: 45px;
+	font-size: 16px;
+	text-align: center;
+	margin-bottom: 50px;
+	margin-top: 50px;
+}
+.login_btn_box
+{
+	padding-bottom: 30px;
+}
+#login_btn
+{
+	width: 120px;
+	line-height: 35px;
+	border: none;
+	color: #fff;
+	background: #4264f8;
+	border-radius: 5px;
+	cursor: pointer;
+	outline: none;
+}
+#login_btn:hover
+{
+	background: #1e48fb;
+}
+
+
+
+.liaotian_box
+{
+	width: 1100px;
+	height: 700px;
+	background: #efefef;
+	overflow: hidden;
+}
+.liaotian_box .liaotian_left
+{
+	width: 300px;
+	height: 100%;
+	background: #2d335a;
+}
+.liaotian_box .liaotian_right
+{
+	width: 800px;
+	height: 100%;
+}
+.liaotian_box .user_img
+{
+	width: 45px;
+	height: 45px;
+}
+.liaotian_user_ul
+{
+	padding: 20px;
+}
+.liaotian_me_ul .user_lis 
+{
+	line-height: 45px;
+}
+.liaotian_user_ul .user_img
+{
+	width: 35px;
+	height: 35px;
+}
+.liaotian_user_ul .user_lis
+{
+	width: 25%;
+	float: left;
+	word-wrap: break-word; 
+	word-break: normal; 
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+	text-align: center;
+	margin-bottom: 20px;
+	
+}
+.liaotian_me .user_lis .user_name
+{
+	padding-left: 10px;
+}
+.liaotian_user_ul .user_lis .user_name
+{
+	width: 100%;
+	padding: 0px 5px;
+}
+
+.user_name
+{
+	color: #fff;
+}
+
+.liaotian_user_title
+{
+	background: rgb(35,41,76);
+	line-height: 50px;
+}
+
+.liaotian_me_ul 
+{
+	padding-left: 20px;
+}
+.liaotian_right_title
+{
+	border-bottom: 1px solid #ccc;
+	line-height: 70px;
+}
+.liaotian_right_bottom
+{
+	width: 100%;
+	height: 180px;
+	position: absolute;
+	bottom: 0px;
+	border-top: 1px solid #ccc;
+}
+#textarea
+{
+	width: 100%;
+	height: 120px;
+	border: none;
+	resize: none;
+	background: none;
+}
+#send_btn
+{
+	border: 1px solid #ccc;
+	line-height: 33px;
+}
+#send_btn.active
+{
+	background: green;
+	border: none;
+	color: #fff;
+}
+.liaotian_user_ul
+{
+	overflow-y: auto;
+	height: 565px;
+}
+.liaotian_right_content
+{
+	width: 100%;
+	height: 448px;
+	overflow-y: auto;
+}
+.liaotian_lis
+{
+	overflow: hidden;
+	padding-top: 15px;
+	padding-bottom: 10px;
+}
+.liaotian_user_touxiang
+{
+	width: 45px;
+	height: 45px;
+}
+.liaotian_content_bieren
+{
+	margin-right: 55px;
+}
+.liaotian_content_bieren>div
+{
+	float: left;
+}
+.liaotian_content_me>div
+{
+	float: right;
+}
+.liaotian_content_me
+{
+	margin-left: 55px;
+	float: right;
+	overflow: hidden;
+}
+.liaotian_user_left
+{
+	width: 45px;
+}
+.liaotian_user_right
+{
+	width: calc(100% - 55px);
+}
+.liaotian_user_msg
+{
+	padding:12px 15px;
+	background: #fff;
+	border-radius: 5px;
+	font-size: 14px;
+	position: relative;
+	word-wrap: break-word; 
+	word-break: normal; 
+	word-break:break-all;
+	display: inline-block;
+}
+.liaotian_user_name
+{
+	color: #333;
+	font-size: 14px;
+	
+}
+.liaotian_content_bieren .liaotian_user_msg:after
+{
+	content: " ";
+	border-top: 5px solid rgba(0,0,0,0);
+	border-bottom: 5px solid rgba(0,0,0,0);
+	border-right: 4px solid rgba(255,255,255,1);
+	position: absolute;
+	left: -4px;
+	top: 50%;
+	transform: translateY(-50%);
+	display: block;
+}
+.liaotian_content_me .liaotian_user_msg
+{
+	background: green;
+	color: #fff;
+}
+.liaotian_content_user 
+{
+	overflow:hidden;
+	display: inline-block;
+}
+
+
+.liaotian_content_me .liaotian_user_msg:after
+{
+	content: " ";
+	border-top: 5px solid rgba(0,0,0,0);
+	border-bottom: 5px solid rgba(0,0,0,0);
+	border-left: 4px solid green;
+	position: absolute;
+	right: -4px;
+	top: 50%;
+	transform: translateY(-50%);
+	display: block;
+}
+.liaotian_content_toop
+{
+	color: #999;
+	font-size: 12px;
+	padding: 0px 30px;
+	text-align: center;
+	margin: 0 auto;
+	width: 100%;
+}
